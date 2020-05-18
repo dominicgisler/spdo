@@ -54,6 +54,8 @@ class PersonRepository extends AbstractRepository
 ```php
 <?php
 
+use \Gisler\Spdo\Collection;
+
 $repo = new PersonRepository();
 
 // get
@@ -67,4 +69,10 @@ $repo->save(new Person(['person_id' => 1, 'name' => 'Max Muster'])); // updates 
 
 // delete
 $repo->delete(new Person(['person_id' => 1, 'name' => 'Max Muster'])); // delete entity with person_id=1
+
+// save collection
+$col = new Collection();
+$col->append(new Person(['name' => 'Max Muster']));
+$col->append(new Person(['name' => 'Fritz Meier']));
+$repo->insertCollection($col);
 ```
