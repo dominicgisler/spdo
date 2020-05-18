@@ -1,0 +1,20 @@
+{
+    "name": "dominicgisler/spdo",
+    "description": "Simple PDO based CRUD functions.",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Dominic Gisler",
+            "email": "domgisler@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gisler\\Spdo\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "ext-pdo": "*"
+    }
+}
